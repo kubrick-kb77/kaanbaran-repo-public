@@ -1,0 +1,21 @@
+lists,A,300,79.171.39.45
+ns,A,300,79.171.39.4
+oldmail,A,300,79.171.34.96
+quotes,A,300,89.107.74.101
+webmail,A,300,79.171.39.4
+autodiscover,CNAME,300,autodiscover.outlook.com
+enterpriseenrollment,CNAME,300,enterpriseenrollment.manage.microsoft.com
+enterpriseregistration,CNAME,300,enterpriseregistration.windows.net
+ftp,CNAME,300,rope-sure.co.uk
+lyncdiscover,CNAME,300,webdir.online.lync.com
+msoid,CNAME,300,clientconfig.microsoftonline-p.net
+sip,CNAME,300,sipdir.online.lync.com
+@,MX,300,5 eu-smtp-inbound-1.mimecast.com
+@,MX,300,10 eu-smtp-inbound-2.mimecast.com
+sip._tcp._sipfederationtls,SRV,300,"100 1 5061 sipfed.online.lync.com"
+sip._tls._tls,SRV,300,"100 1 443 sipdir.online.lync.com"
+@,TXT,300,"""MS=ms99173055 3600"" ""0ed1fe018a21213395352a44b7b030562ddff7e0f2"" ""MS=ms99173055"" ""MS=ms94579048"" ""v=spf1 include:spf.protection.outlook.com include:_netblocks.mimecast.com include:hostinguk.net -all"" ""Target: 0ed1fe018afeb93ad1bf0546919ac5a1aee1dce33f"""
+_acme-challenge,TXT,300,"""X_Yfj_UcNuWkYNBNWtba65cNcr5pWoUUZ8gyHB_z4Ao"""
+_acme-challenge.www,TXT,300,"""dHj2-CnPUTUwv5Pm6jqqupMbSJXvvkP25Z60nHbemOg"""
+@,AKAMAICDN,20,cv.kabara.com.edgesuite.net
+www,CNAME,20,apex-redirects.kaanbarandns2.com.edgekey.net
