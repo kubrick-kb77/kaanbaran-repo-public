@@ -1,0 +1,6 @@
+header-from: main.tf
+footer-from: ../../CONTRIBUTING.md
+formatter: markdown table
+output:
+  file: README.md
+  mode: replace

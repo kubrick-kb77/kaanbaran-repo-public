@@ -1,0 +1,20 @@
+edgerc_section = "xxxx" # Replace xxxx with your edgerc section name - use "default" if you have not created any additional sections or manage a single account
+name           = "xxxx" # Replace xxxx with your property name
+contract_id    = "xxxx" # Replace xxxx with your contract id
+group_id       = "xxxx" # Replace xxxx with your group id
+hostnames      = ["xxxx-a1.example.com","xxxx-a2.example.com","xxxx-a3.example.com","www.xxxx-a1.example.com","www.xxxx-a2.example.com","www.xxxx-a3.example.com"] # Replace xxxx with your public hostnames
+default_origin = "xxxx" # Replace xxxx with your default origin hostname"
+
+second_hostname = "xxxx-b1.example.com" # Replace xxxx with your second public hostname if required
+second_origin = "xxxx" #Replace xxxx with your second origin hostname if required
+
+email          = "xxxx" # Replace xxxx with your email address for notifications
+enhanced_tls   = true # Set to true to enable Enhanced TLS (edgekey.net) - set to false for standard TLS (edgesuite.net)
+#certificate_id = 185425 # Replace with your enrollment ID if using an existing DV SAN Certificate (SANs for hostnames require to be prepopulated in CPS)
+secure_by_default = true # Set to true to enable Secure by Default - false for CPS Certs
+
+activate_to_staging = true # Set to true to activate the property to staging
+activate_to_production = true # Set to true to activate the property to production
+
+# DNS variables
+zone_name = "kaanbaran.com" # Replace with your primary DNS Zone name. DNS Zone but exist in EDNS for validation and edgekey CNAME placement
