@@ -11,7 +11,7 @@ Please refer to (https://techdocs.akamai.com/developer/docs/edgegrid)
 
 ```bash
 > git clone <git url>
-> cd ps_terraform_templates/new-property/
+> cd working/directory
 ```
 
 2. Rename file `terraform.tfvars.dist` into `terraform.tfvars` (without .dist in the end) and specify required variables there.
@@ -48,14 +48,14 @@ No resources.
 |------|-------------|------|---------|:--------:|
 | <a name="input_activate_to_production"></a> [activate\_to\_production](#input\_activate\_to\_production) | n/a | `bool` | `false` | no |
 | <a name="input_activate_to_staging"></a> [activate\_to\_staging](#input\_activate\_to\_staging) | n/a | `bool` | `false` | no |
-| <a name="input_activation_notes"></a> [activation\_notes](#input\_activation\_notes) | Activation notes. Leave default value until DXE-2373 is resolved, unless you know what you are doing. | `string` | `"activated with terraform"` | no |
+| <a name="input_activation_notes"></a> [activation\_notes](#input\_activation\_notes) | Activation notes. Leave default value. | `string` | `"activated with terraform"` | no |
 | <a name="input_certificate_id"></a> [certificate\_id](#input\_certificate\_id) | Certificate enrollment id. Only applicable if enhanced\_tls is true, and secure\_by\_default<br>    is false.<br><br>    Can be retrieved using AkamaiPowershell or the Akamai CPS CLI. | `number` | `null` | no |
-| <a name="input_compliance_record"></a> [compliance\_record](#input\_compliance\_record) | Set this according to the change management policy if activate\_to\_production is true.<br><br>Refer to https://collaborate.akamai.com/confluence/pages/viewpage.action?spaceKey=DEVOPSHARMONY&title=Terraform+for+Akamai+PS<br>for further guidance. | <pre>object({<br>    noncompliance_reason = string<br>    peer_reviewed_by     = optional(string)<br>    customer_email       = optional(string)<br>    unit_tested          = optional(bool)<br>  })</pre> | `null` | no |
+| <a name="input_compliance_record"></a> [compliance\_record](#input\_compliance\_record) | Set this according to the change management policy if activate\_to\_production is true.<br><br> | <pre>object({<br>    noncompliance_reason = string<br>    peer_reviewed_by     = optional(string)<br>    customer_email       = optional(string)<br>    unit_tested          = optional(bool)<br>  })</pre> | `null` | no |
 | <a name="input_contract_id"></a> [contract\_id](#input\_contract\_id) | Contract ID for property/config creation | `string` | n/a | yes |
 | <a name="input_cpcode_name"></a> [cpcode\_name](#input\_cpcode\_name) | Default CP Code name. Will be the property name (var.name) if null. | `string` | `null` | no |
 | <a name="input_default_origin"></a> [default\_origin](#input\_default\_origin) | Default origin server for all properties | `string` | n/a | yes |
 | <a name="input_edgerc_path"></a> [edgerc\_path](#input\_edgerc\_path) | Path to the .edgerc file. | `string` | `null` | no |
-| <a name="input_edgerc_section"></a> [edgerc\_section](#input\_edgerc\_section) | Section in the .edgerc file.<br><br>    For professional services, it is recommended to create a new section for<br>    each account managed. | `string` | n/a | yes |
+| <a name="input_edgerc_section"></a> [edgerc\_section](#input\_edgerc\_section) | Section in the .edgerc file.<br><br> | `string` | n/a | yes |
 | <a name="input_ehn_domain"></a> [ehn\_domain](#input\_ehn\_domain) | EdgeHostname domain, e.g. edgesuite.net or edgekey.net. Will default to one or<br>    the other, based on the value of enhanced\_tls. | `string` | `null` | no |
 | <a name="input_email"></a> [email](#input\_email) | Email address used for activations. | `string` | n/a | yes |
 | <a name="input_enhanced_tls"></a> [enhanced\_tls](#input\_enhanced\_tls) | Boolean to switch between Enhanced and Standard TLS modes | `bool` | n/a | yes |
@@ -67,17 +67,13 @@ No resources.
 | <a name="input_rule_format"></a> [rule\_format](#input\_rule\_format) | Property rule format | `string` | `"latest"` | no |
 | <a name="input_secure_by_default"></a> [secure\_by\_default](#input\_secure\_by\_default) | Secure by default. Set to true to use the DEFAULT certificate provisioning type.<br><br>    This is the easiest for automation, because Akamai takes care of provisioning the certificate<br>    using a Let's Encrypt DV SAN in a fully managed way.<br><br>    If the customer requires an OV SAN, or Secure by Default is inapplicable for whatever<br>    other reason, set this to false. | `bool` | `true` | no |
 | <a name="input_sure_route_test_object"></a> [sure\_route\_test\_object](#input\_sure\_route\_test\_object) | Test object path for SureRoute | `string` | `"/akamai/testobject.html"` | no |
-| <a name="input_td_region"></a> [td\_region](#input\_td\_region) | Region (map) for Tiered Distribution behaviour. Only applies if network is Standard TLS.<br>    Options are: CH2, CHAPAC, CHEU2, CHEUS2, CHWUS2, CHCUS2, CHAUS | `string` | `"CH2"` | no |
+| <a name="input_td_region"></a> [td\_region](#input\_td\_region) | Region (map) for Tiered Distribution behaviour. Only applies if network is Standard TLS.<br> | `string` | `"CH2"` | no |
 | <a name="input_version_notes"></a> [version\_notes](#input\_version\_notes) | Property version notes. | `string` | `""` | no |
 
 ## Outputs
 
 No outputs.
 
-# Contributing
-
-When contributing to this repository, please first discuss the change you wish to make via issue,
-email, or any other method with the owners of this repository before making a change.
 
 ## Prerequisites
 
